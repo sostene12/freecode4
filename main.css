@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+}
+#main-doc {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.navigation {
+  min-width: 290px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-right: 5px solid rgba(0, 22, 22, 0.4);
+  overflow: scroll;
+  z-index: 100;
+}
+.navigation header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid black;
+}
+.content {
+  position: absolute;
+  padding: 1rem 4rem;
+  left: 290px;
+  margin-left: 2rem;
+}
+header {
+  font-weight: bolder;
+  font-size: 1.6rem;
+}
+#navbar ul li {
+  padding: 0.8rem 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  border-bottom: 1px solid black;
+  min-width: auto;
+}
+#navbar ul li:last-child {
+  border-bottom: none;
+}
+#navbar ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #4d4e53;
+}
+.main-section header {
+  padding: 1rem 0;
+  font-size: 1.9rem;
+}
+.main-section p {
+  padding: 1rem 0;
+}
+.main-section ul {
+  padding: 1rem 5rem;
+}
+.main-section ul li {
+  padding: 1rem;
+}
+
+code {
+  display: block;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  white-space: pre-line;
+  text-align: left;
+  position: inherit;
+  word-wrap: normal;
+  word-break: normal;
+  line-height: 2;
+  padding: 0.5rem;
+  position: relative;
+}
+@media (max-width: 768px) {
+  html {
+    overflow-y: scroll;
+  }
+  #main-doc {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .navigation {
+    width: 100%;
+    z-index: 1;
+    height: 207px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-bottom: 5px solid rgba(0, 22, 22, 0.4);
+    background-color: white;
+  }
+  #navbar {
+    margin: 0 auto;
+    overflow: scroll;
+    width: inherit;
+    text-align: center;
+  }
+  #navbar ul {
+    overflow: scroll;
+  }
+  #navbar ul li {
+    width: inherit;
+    padding: 0.2rem 0;
+  }
+  .navigation header {
+    text-align: center;
+    border-bottom: none;
+  }
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 205px;
+    left: 0;
+    margin: 1rem 0;
+  }
+
+  .main-section header {
+    padding: 0.5rem 0;
+    font-size: 1.7rem;
+  }
+  .main-section p {
+    padding: 0.5rem 0;
+  }
+  .main-section ul {
+    padding: 0.5rem 1rem;
+  }
+  .main-section ul li {
+    padding: 0.5rem;
+  }
+}
